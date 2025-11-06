@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에이원 학습카드 - 시작 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        h1 {
+            color: #1a237e;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: #1a237e;
+        }
+
+        .btn-success {
+            background: #27ae60;
+        }
+
+        .btn-info {
+            background: #3498db;
+        }
+
+        .btn-emoji {
+            font-size: 24px;
+        }
+
+        .btn-text {
+            flex: 1;
+            text-align: left;
+            margin: 0 16px;
+        }
+
+        .btn-title {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .btn-desc {
+            font-size: 13px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .divider {
+            margin: 30px 0;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .info-title {
+            color: #1a237e;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .info-list {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .btn {
+                padding: 16px;
+            }
+
+            .btn-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="에이원 과학 전문학원" onerror="this.style.display='none'">
+            </div>
+
+            <h1>🎓 에이원 학습카드 시스템</h1>
+            <p class="subtitle">시작할 페이지를 선택하세요</p>
+
+            <div class="button-group">
+                <a href="demo.html" class="btn btn-success">
+                    <span class="btn-emoji">👀</span>
+                    <span class="btn-text">
+                        <span class="btn-title">데모 보기</span>
+                        <span class="btn-desc">설정 없이 바로 디자인 확인</span>
+                    </span>
+                    <span class="btn-emoji">→</span>
+                </a>
+
+                <a href="admin.html" class="btn btn-primary">
+                    <span class="btn-emoji">⚙️</span>
+                    <span class="btn-text">
+                        <span class="btn-title">관리자 페이지</span>
+                        <span class="btn-desc">설정 및 링크 생성</span>
+                    </span>
+                    <span class="btn-emoji">→</span>
+                </a>
+
+                <a href="README.md" class="btn btn-info" target="_blank">
+                    <span class="btn-emoji">📖</span>
+                    <span class="btn-text">
+                        <span class="btn-title">설치 가이드</span>
+                        <span class="btn-desc">구글 시트 연동 방법</span>
+                    </span>
+                    <span class="btn-emoji">→</span>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-box">
+                <div class="info-title">📌 빠른 시작 가이드</div>
+                <ol class="info-list">
+                    <li><strong>첫 방문?</strong> → "데모 보기"로 디자인 확인</li>
+                    <li><strong>실제 사용?</strong> → "관리자 페이지"에서 설정</li>
+                    <li><strong>오류 발생?</strong> → TROUBLESHOOTING.md 확인</li>
+                </ol>
+            </div>
+
+            <div class="info-box" style="background: #fff3cd; margin-top: 16px;">
+                <div class="info-title" style="color: #856404;">⚠️ study-card.html 직접 열면 오류!</div>
+                <p style="color: #856404; font-size: 14px; margin: 0;">
+                    study-card.html은 링크로만 접근 가능합니다.<br>
+                    관리자 페이지에서 생성한 링크를 사용하세요.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
